@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 import {addPairs, getInputValue} from './AddPairs'
+import countConveyor from './CountConveyor'
 
 function App() {
   let item: any;                                      //я не знаю, как это пофиксить,  
-  const [renderItem, setRenderItem] = useState(item); //но выглядит как костыль
+  const [renderPairForms, setRenderPairForms] = useState(item); //но выглядит как костыль
   const [pairCount, setPairCount] = useState(0);
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
             const count = getInputValue();
             if (typeof addPairs() !== "undefined" && typeof count !== "undefined") {
               setPairCount(Number.parseInt(count));
-              setRenderItem(addPairs());
+              setRenderPairForms(addPairs());
             }
           }}>
             <input id="pairCountInput"
@@ -35,10 +36,10 @@ function App() {
           className="Pairs-input"
           onSubmit={(event) => { 
             event.preventDefault();
-            
+            countConveyor(pairCount);
           }}
         >
-          {renderItem}
+          {renderPairForms}
           <input type="submit" />
         </form>
       </header>

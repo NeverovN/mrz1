@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import addPairs from './AddPairs'
+import {addPairs, getInputValue} from './AddPairs'
 
 function App() {
   let item: any;                                      //я не знаю, как это пофиксить,  
   const [renderItem, setRenderItem] = useState(item); //но выглядит как костыль
+  const [pairCount, setPairCount] = useState(0);
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +16,9 @@ function App() {
           введите количество пар
           <form onSubmit={(event) => {
             event.preventDefault();
-            if (typeof addPairs() !== "undefined") {
+            const count = getInputValue();
+            if (typeof addPairs() !== "undefined" && typeof count !== "undefined") {
+              setPairCount(Number.parseInt(count));
               setRenderItem(addPairs());
             }
           }}>
@@ -32,6 +35,7 @@ function App() {
           className="Pairs-input"
           onSubmit={(event) => { 
             event.preventDefault();
+            
           }}
         >
           {renderItem}

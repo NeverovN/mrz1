@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  text-align: left;
+  margin: 30;
 }
 
 .App-logo {
@@ -14,14 +15,30 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
+  margin: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: top;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
+}
+
+.App-input {
+  justify-content: space-between;
+  display: flex;
+  width: 500px;
+}
+.App-button {
+  justify-content:right;
+  display: flex;
+  width: 500px;
+}
+
+.Button {
+  width: 143px;
 }
 
 .App-link {

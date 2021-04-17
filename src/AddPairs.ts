@@ -10,7 +10,9 @@ function getInputValue(): string | undefined {
 
 function stringToNumber(val: string): number {
     if(Number.isNaN(Number.parseInt(val))){
-        return 0;
+        return 0;  // здесь стоит потом добавить сообщение
+                   // об ошибке вместо возврата 0, т.к. пользователю
+                   // не будет понятно, что поизошло
     }
     return Number.parseInt(val);
 }

@@ -27,8 +27,16 @@ function App() {
             <input type="submit" className="Button" />
           </form>
           <br />
-          {renderItem}
         </div>
+        <form
+          className="Pairs-input"
+          onSubmit={(event) => { 
+            event.preventDefault();
+          }}
+        >
+          {renderItem}
+          <input type="submit" />
+        </form>
       </header>
     </div>
   );

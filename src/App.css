@@ -31,10 +31,16 @@
   display: flex;
   width: 500px;
 }
+
 .App-button {
   justify-content:right;
   display: flex;
   width: 500px;
+}
+
+.Pairs-input {
+  flex-direction: column;
+  height: 1000px;
 }
 
 .Button {
@@ -43,6 +49,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+ul {
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {

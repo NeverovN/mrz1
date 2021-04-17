@@ -4,9 +4,12 @@ export default function createPairs(pairCount: number) {
         pairs.push(<>
             <li><input type="text" id={`pair${i + 1}el1`} /></li>
             <li><input type="text" id={`pair${i + 1}el2`} /></li>
-            </>
+        </>
         );
     }
-    
-    return <ul>{pairs}</ul>;
+
+    return (<>
+        <ul>{pairs}</ul>
+        <input type="submit" />
+    </>);
 }

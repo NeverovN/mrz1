@@ -1,6 +1,6 @@
 import createPairs from './CreatePairs'
 
-function getInputValue(): string | undefined {
+export function getInputValue(): string | undefined {
     const pairCountInputField = document.getElementById("pairCountInput") as HTMLInputElement | null;
     if (pairCountInputField !== null){
         const inputValue = pairCountInputField.value;
@@ -19,7 +19,7 @@ function stringToNumber(val: string): number {
 
 
 
-export default function addPairs() {
+export function addPairs() {
     const inputValue = getInputValue();
     if(typeof inputValue === "undefined"){
         console.log("WRONG INPUT");

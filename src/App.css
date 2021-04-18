@@ -27,6 +27,7 @@
 }
 
 .App-input {
+  flex-direction: column;
   justify-content: space-between;
   display: flex;
   width: 500px;

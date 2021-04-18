@@ -16,7 +16,8 @@ function App() {
           Лаба 1
         </p>
         <div className="App-input">
-          введите количество пар
+          <text>введите количество пар</text>
+          <br/>
           <form onSubmit={(event) => {
             event.preventDefault();
             const count = getInputValue();

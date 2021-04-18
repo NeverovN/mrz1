@@ -4,9 +4,9 @@ import {addPairs, getInputValue} from './AddPairs'
 import countConveyor from './CountConveyor'
 
 function App() {                                         
-  const [renderPairForms, setRenderPairForms] : [any, any] = useState();
-  const [renderConveyorInput, setRenderConveyorInput] : [any, any]= useState();
-  const [pairCount, setPairCount] : [number, any] = useState(0);
+  const [renderPairForms, setRenderPairForms] : any = useState();
+  const [renderConveyorInput, setRenderConveyorInput] : any= useState();
+  const [pairCount, setPairCount] : any = useState(0);
   
   return (
     <div className="App">

@@ -3,11 +3,10 @@ import './App.css';
 import {addPairs, getInputValue} from './AddPairs'
 import countConveyor from './CountConveyor'
 
-function App() {
-  let item: any;                                                //я не знаю, как это пофиксить,  
-  const [renderPairForms, setRenderPairForms] = useState(item); //но выглядит как костыль
-  const [renderConveyorInput, setrenderConveyorInput] = useState(item);
-  const [pairCount, setPairCount] = useState(0);
+function App() {                                         
+  const [renderPairForms, setRenderPairForms] : [any, any] = useState();
+  const [renderConveyorInput, setRenderConveyorInput] : [any, any]= useState();
+  const [pairCount, setPairCount] : [number, any] = useState(0);
   
   return (
     <div className="App">
@@ -39,7 +38,7 @@ function App() {
           className="Pairs-input"
           onSubmit={(event) => { 
             event.preventDefault();
-            setrenderConveyorInput(countConveyor(pairCount));
+            setRenderConveyorInput(countConveyor(pairCount));
           }}
         >
           {renderPairForms}

@@ -6,7 +6,7 @@ import countConveyor from './CountConveyor'
 function App() {
   let item: any;                                                //я не знаю, как это пофиксить,  
   const [renderPairForms, setRenderPairForms] = useState(item); //но выглядит как костыль
-  const [renderConveyorInput, setrenderConveyorInput] = useState(0);
+  const [renderConveyorInput, setrenderConveyorInput] = useState(item);
   const [pairCount, setPairCount] = useState(0);
   
   return (
@@ -43,6 +43,7 @@ function App() {
         >
           {renderPairForms}
         </form>
+        {renderConveyorInput}
       </header>
     </div>
   );

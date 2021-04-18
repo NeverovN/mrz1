@@ -55,6 +55,10 @@ ul {
   list-style-type: none;
 }
 
+.Rows {
+  flex-direction: row;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

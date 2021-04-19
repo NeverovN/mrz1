@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
-import {addPairs, getInputValue} from './AddPairs'
+import { addPairs, getInputValue } from './AddPairs'
 import countConveyor from './CountConveyor'
 
-function App() {                                         
-  const [renderPairForms, setRenderPairForms] : any = useState();
-  const [renderConveyorInput, setRenderConveyorInput] : any= useState();
-  const [pairCount, setPairCount] : any = useState(0);
-  
+function App() {
+  const [renderPairForms, setRenderPairForms]: any = useState();
+  const [renderConveyorInput, setRenderConveyorInput]: any = useState();
+  const [pairCount, setPairCount]: any = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,8 +15,8 @@ function App() {
           Лаба 1
         </p>
         <div className="App-input">
-          <text>введите количество пар</text>
-          <br/>
+          {/* <text>введите количество пар</text> */}
+          <br />
           <form onSubmit={(event) => {
             event.preventDefault();
             const count = getInputValue();
@@ -36,14 +36,16 @@ function App() {
         </div>
         <form
           className="Pairs-input"
-          onSubmit={(event) => { 
+          onSubmit={(event) => {
             event.preventDefault();
             setRenderConveyorInput(countConveyor(pairCount));
           }}
         >
           {renderPairForms}
         </form>
-        {renderConveyorInput}
+        <div>
+          {renderConveyorInput}
+        </div>
       </header>
     </div>
   );

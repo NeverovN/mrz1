@@ -41,7 +41,7 @@
 
 .Pairs-input {
   flex-direction: column;
-  height: 1000px;
+  padding-bottom: 30px;
 }
 
 .Button {
@@ -58,6 +58,19 @@ ul {
 
 .Rows {
   flex-direction: row;
+  width: 100%
+}
+
+td {
+  margin: 20px;
+}
+
+.Table {
+  border-radius: 1;
+}
+
+.Marging {
+  margin: 10px;
 }
 
 @keyframes App-logo-spin {

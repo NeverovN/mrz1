@@ -1,30 +1,28 @@
 
 function createGrid(colCount: number){ //just testing
-    const grid: JSX.Element[][]= [[]];
-    grid[0].push(<div></div>);
+    const grid: string[][]= [[]];
+    grid[0].push("");
 
     for(let i: number = 0; i < colCount; i++){
-        grid[0].push((<div>
-            <text>{`pair ${i+1}`}</text>
-        </div>));
+        grid[0].push(`pair ${i+1}`);
     }
 
     for(let i: number = 1; i < 2* colCount; i++){
         grid.push([]);
-        grid[i].push((<div>
-            <text>{`tact ${i}`}</text>
-        </div>))
+        grid[i].push(`tact ${i}`);
         for(let j: number = 0; j < colCount; j++){
-            grid[i].push((<div>
-                <text>{`херь какая-то`}</text>
-            </div>));
+            grid[i].push(`херь какая-то`);
         }
     }
 
-    const newGrid = grid.map(el => {
-        return <div className="Rows">{el}</div>
+    console.log(grid);
+
+    const newGrid = grid.map((el, index) => {
+        const newEl = el.map(el => index === 0 ? <th>{el}</th> : <td>{el}</td>);
+        return (<tr>{newEl}</tr>);
     });
-    return newGrid;
+
+    return (<table>{[newGrid]}</table>);
 }
 
 export default function countConveyor(pairCount: number){ //testing too

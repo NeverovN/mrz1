@@ -1,0 +1,5 @@
+.Initial {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}

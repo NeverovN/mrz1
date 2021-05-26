@@ -14,6 +14,10 @@
   }
 }
 
+table {
+  border: 1px;
+}
+
 .App-header {
   background-color: #ffffff;
   min-height: 100vh;
@@ -34,12 +38,13 @@
 }
 
 .App-button {
-  justify-content:right;
+  justify-content: right;
   display: flex;
   width: 500px;
 }
 
 .Pairs-input {
+  flex: 1;
   flex-direction: column;
   padding-bottom: 30px;
 }
@@ -58,7 +63,7 @@ ul {
 
 .Rows {
   flex-direction: row;
-  width: 100%
+  width: 100%;
 }
 
 td {

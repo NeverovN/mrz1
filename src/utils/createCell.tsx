@@ -13,9 +13,11 @@ export const createCell = (props: ICreateCellProps) => {
   }
   cell.push(
     "Part. mult: ",
+    <br />,
     props.mult,
     <br />,
     "Part. sum: ",
+    <br />,
     props.sum,
     <br />,
     "tact: ",

@@ -41,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/runtime": "^7.14.0",
+    "babel-plugin-module-resolver": "^4.1.0"
   }
 }

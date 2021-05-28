@@ -1,5 +1,5 @@
 // components
-import AppView from "./components/App";
+import AppView from "./app/components/App/index";
 
 function App() {
   return <AppView />;

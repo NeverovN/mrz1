@@ -6,6 +6,9 @@ import FormView from "../Form/index";
 import TextInputView from "../../../common/components/TextInput/index";
 import ButtonView from "../../../common/components/Button/index";
 
+// containers
+import RadioContainer from "../../containers/Radio/index";
+
 // styles
 import "./styles.css";
 
@@ -52,6 +55,8 @@ const InitialView: FC<IInitialViewProps> = (props) => {
             onChange={props.setTactTime}
             placeHolder="tact time"
           />
+          <br />
+          <RadioContainer />
           <br />
           <ButtonView onClick={props.onClick} title="Submit" />
         </FormView>

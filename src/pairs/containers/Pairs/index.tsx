@@ -24,7 +24,7 @@ import { useGetResult } from "../../hooks/useGetResult";
 import { setRenderTable } from "../../../common/store/actions";
 
 // types
-import { StoreType } from "../../types/store";
+import { StoreType } from "../../../common/types/store";
 
 // utils
 import { useInitPairsArr } from "../../hooks/useInitPairsArr";

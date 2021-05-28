@@ -2,6 +2,7 @@ import React from "react";
 
 export const RENDER_PAIRS = "RenderPairs";
 export const RENDER_TABLE = "RenderTable";
+export const CHOOSE_METHOD = "ChooseMethod";
 
 export const setRenderPairs = (
   allowed: boolean,
@@ -16,6 +17,13 @@ export const setRenderPairs = (
     tact,
   };
   return { type: RENDER_PAIRS, pairs };
+};
+
+export const setMethod = (meth: string) => {
+  const method = {
+    method: meth,
+  };
+  return { type: CHOOSE_METHOD, method };
 };
 
 export const setRenderTable = (

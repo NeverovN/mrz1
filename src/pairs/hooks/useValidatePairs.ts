@@ -2,7 +2,7 @@ import { validatePairElement } from "../utils/validatePairElement";
 import { useSelector } from "react-redux";
 
 // types
-import { StoreType } from "../../pairs/types/store";
+import { StoreType } from "../../common/types/store";
 
 export const useValidatePairs = (pairs: string[][], count: number) => {
   const size: any = useSelector<StoreType>(({ screen }) => screen.pairs.size);

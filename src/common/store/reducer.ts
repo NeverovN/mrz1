@@ -1,7 +1,10 @@
 import React from "react";
-import { RENDER_PAIRS, RENDER_TABLE } from "./actions";
+import { RENDER_PAIRS, RENDER_TABLE, CHOOSE_METHOD } from "./actions";
 
 const initialState = {
+  method: {
+    method: "left",
+  },
   pairs: {
     allowed: false,
     count: 0,
@@ -16,6 +19,9 @@ const initialState = {
 
 type ActionType = {
   type: string;
+  method: {
+    method: string;
+  };
   pairs: {
     allowed: boolean;
     size: number;
@@ -37,7 +43,10 @@ const reducer = (state = initialState, action: ActionType) => {
     }
     case RENDER_TABLE: {
       state.table = { ...action.table };
-
+      return state;
+    }
+    case CHOOSE_METHOD: {
+      state.method = { ...action.method };
       return state;
     }
     default: {

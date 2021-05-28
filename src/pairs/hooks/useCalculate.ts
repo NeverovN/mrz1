@@ -1,37 +1,24 @@
 import { useSelector } from "react-redux";
 
 // types
-import { StoreType } from "../../pairs/types/store";
+import { StoreType } from "../../common/types/store";
+
+// hooks
+import { useCalculateLeft } from "./useCalculateLeft";
+import { useCalculateRight } from "./useCalculateRight";
 
 export const useCalculate = (pairs: string[][]) => {
   const size: any = useSelector<StoreType>(({ screen }) => screen.pairs.size);
+  const method: any = useSelector<StoreType>(
+    ({ screen }) => screen.method.method
+  );
 
-  const calculate = (pairsArray: number[][][]) => {
-    pairsArray.map((el, index) => {
-      const bin = Number.parseInt(pairs[index][1])
-        .toString(2)
-        .split("")
-        .reverse()
-        .join("");
-      for (let i = 0; i < size; i++) {
-        if (bin[i] === "1") {
-          el[0][i] = el[0][i] << i;
-        } else {
-          el[0][i] = 0;
-        }
-      }
+  const calculateLeft = useCalculateLeft(pairs, size);
+  const calculateRight = useCalculateRight();
 
-      for (let i = 0; i < size; i++) {
-        if (i === 0) {
-          el[1][i] = el[0][i];
-          continue;
-        }
-        el[1][i] = el[0][i] + el[1][i - 1];
-      }
-
-      return [];
-    });
-  };
-
-  return calculate;
+  if (method === "left") {
+    return calculateLeft;
+  } else {
+    return calculateRight;
+  }
 };

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import ResultView from "../../components/Result/index";
 
 // types
-import { StoreType } from "../../../pairs/types/store";
+import { StoreType } from "../../../common/types/store";
 
 interface IResultContainerProps {}
 

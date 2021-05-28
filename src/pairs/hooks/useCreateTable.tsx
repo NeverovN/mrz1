@@ -6,7 +6,7 @@ import { createRow } from "../utils/createRow";
 import { createCell } from "../utils/createCell";
 
 // types
-import { StoreType } from "../types/store";
+import { StoreType } from "../../common/types/store";
 
 export const useCreateTable = () => {
   const size: any = useSelector<StoreType>(({ screen }) => screen.pairs.size);

@@ -1,5 +1,8 @@
 export type StoreType = {
   screen: {
+    method: {
+      method: string;
+    };
     pairs: {
       allowed: boolean;
       count: number;

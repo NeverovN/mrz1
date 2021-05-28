@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 // types
-import { StoreType } from "../../pairs/types/store";
+import { StoreType } from "../../common/types/store";
 
 export const useInitPairsArr = (pairs: string[][]) => {
   const size: any = useSelector<StoreType>(({ screen }) => screen.pairs.size);

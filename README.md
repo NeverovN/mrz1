@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Repo clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Для начала работы с проектом перейдите в папку желаемого расположения репозитория
 
-## Available Scripts
+`cd ProjectDir`
 
-In the project directory, you can run:
+Затем склонийруте данный репозиторий и перейдите в него
 
-### `npm start`
+`git clone https://github.com/NeverovN/mrz1.git && cd mrz1` 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Package installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Для работы с проектом вам понадобятся платформа `nodejs` и пакетный менеджер `yarn`
 
-### `npm test`
+Их установка:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ `sudo apt install curl`
 
-### `npm run build`
+ `curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+ 
+ `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+ 
+ `sudo apt update && sudo apt install yarn`
+ 
+После завершения их установки следует выполнить 2 команды для запуска самого проекта:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ `yarn` — установит все необходимые пакеты
+ 
+ `yarn start` — запустит локальный сервер с приложением (localhost:3000)
+ 
+# Brief introduction
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Initial values
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+В первые 3 поля для ввода нежно соответственно ввести:
+1. максимальное количество битов в числе (4 ⩽ size ⩽ 8)
+2. количество пар чисел (3 ⩽ count ⩽ 20)
+3. время одного такта (1 ⩽ time ⩽ 10)
+4. метод вычисления произведения (со сдвигом вправо или влево)
 
-### `npm run eject`
+Для полей предусмотрена валидация данных, подходят лишь числа в указанных диапазонах. В случае введения некорректных данных возникает всплывающее окно с ошибкой.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Pairs
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+При условии корректного ввода данных, после нажатия кнопки появляется count пар полей для ввода, в которые необходимо ввести соответственно 1е и второе числа пары. Для чисел также предусмотрена валидация, это должны быть неотрицательные числа, величина модуля которых не превышает 2^size - 1
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Table
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+При условии корректного ввода данных на предыдущем этапе, после нажатия кнопки должна появиться таблица, в которой будут отражены промежуточные результаты вычислений в каждый такт времени, представленные в двоичном виде, время, прошедшее с запуска конвейера, а также вектор решений.

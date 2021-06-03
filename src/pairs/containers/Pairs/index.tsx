@@ -59,7 +59,6 @@ const PairsContainer: FC<IPairsContainerProps> = () => {
 
   const submitHandler = () => {
     if (!validatePairs()) {
-      console.log("invalid");
       alert("Error.\nPlease, provide correct data");
       return null;
     }
@@ -67,7 +66,6 @@ const PairsContainer: FC<IPairsContainerProps> = () => {
     calculate(pairsArray);
     table.current = createTable(pairsArray, tact);
     result.current = getResult(pairs);
-    console.log(result.current);
     setTableRender();
   };
   useEffect(() => {

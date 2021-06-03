@@ -1,6 +1,6 @@
 export const useCalculateLeft = (pairs: string[][], size: number) => {
   const calculate = (pairsArray: number[][][]) => {
-    pairsArray.map((el, index) => {
+    pairsArray.forEach((el, index) => {
       const bin = Number.parseInt(pairs[index][1])
         .toString(2)
         .split("")
@@ -21,8 +21,6 @@ export const useCalculateLeft = (pairs: string[][], size: number) => {
         }
         el[1][i] = el[0][i] + el[1][i - 1];
       }
-
-      return [];
     });
   };
 

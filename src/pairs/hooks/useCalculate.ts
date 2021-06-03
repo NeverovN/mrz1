@@ -14,7 +14,7 @@ export const useCalculate = (pairs: string[][]) => {
   );
 
   const calculateLeft = useCalculateLeft(pairs, size);
-  const calculateRight = useCalculateRight();
+  const calculateRight = useCalculateRight(pairs, size);
 
   if (method === "left") {
     return calculateLeft;

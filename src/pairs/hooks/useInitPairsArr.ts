@@ -5,6 +5,7 @@ import { StoreType } from "../../common/types/store";
 
 export const useInitPairsArr = (pairs: string[][]) => {
   const size: any = useSelector<StoreType>(({ screen }) => screen.pairs.size);
+
   const pairsArray = new Array<Array<Array<number>>>();
 
   const initPairs = () => {

@@ -1,3 +1,4 @@
+// ts typechecker
 export type StoreType = {
   screen: {
     method: {

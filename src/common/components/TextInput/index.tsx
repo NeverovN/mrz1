@@ -1,13 +1,13 @@
 import { FC, FormEvent, memo } from "react";
 
 interface ITextInputViewProps {
-  value?: string;
-  onChange?(e: FormEvent<HTMLInputElement>): void;
-  size?: number;
-  id?: string;
-  placeHolder?: string;
+  value: string;
+  onChange(e: FormEvent<HTMLInputElement>): void;
+  size: number;
+  placeHolder: string;
 }
 
+// common reusable text input component
 const TextInputView: FC<ITextInputViewProps> = (props) => {
   return (
     <input
@@ -15,7 +15,6 @@ const TextInputView: FC<ITextInputViewProps> = (props) => {
       size={props.size}
       value={props.value}
       onChange={props.onChange}
-      id={props.id}
       placeholder={props.placeHolder}
     />
   );

@@ -1,9 +1,11 @@
 import React from "react";
 
+// action names
 export const RENDER_PAIRS = "RenderPairs";
 export const RENDER_TABLE = "RenderTable";
 export const CHOOSE_METHOD = "ChooseMethod";
 
+// action implementations
 export const setRenderPairs = (
   allowed: boolean,
   size: number,

@@ -7,7 +7,7 @@ import "./styles.css";
 import { createKey } from "../../../common/utils/createKey";
 
 interface IButtonViewProps {
-  onClick?(): void;
+  onClick(): void;
   title: string;
 }
 

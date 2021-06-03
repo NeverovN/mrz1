@@ -1,6 +1,7 @@
 import React from "react";
 import { RENDER_PAIRS, RENDER_TABLE, CHOOSE_METHOD } from "./actions";
 
+// default state
 const initialState = {
   method: {
     method: "left",
@@ -17,6 +18,7 @@ const initialState = {
   },
 };
 
+// ts typechecker
 type ActionType = {
   type: string;
   method: {
